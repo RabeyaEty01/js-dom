@@ -24,7 +24,16 @@
         <h1>Welcome to my blog website</h1>
     </header>
     <main>
-        <section class="blogs">
+        <section id="blogs" class="blogs">
+            <header>
+                <h2>Blogs List</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
             <article class="blog">
                 <h3>My awesome Blog-1</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, excepturi. Ratione consequatur
@@ -76,20 +85,52 @@
         secondTitle.innerText = 'Title updated by JS';
 
 
-        //explore getElementsByClassName
-        const blogs = document.getElementsByClassName('blog');
-
-        for(const blog of blogs){
-           blog.style.border ='2px solid orange';
-           blog.style.margin= '5px';
-           blog.style.padding='5px';
-           blog.style.borderRadius= '10px';
-        }
+        
 
 
         //document.querySelector('.blog');
         //document.querySelector('#second-blog p');
         //document.querySelectorAll('.blog');
+
+
+        //create and add element by using JS
+        // create the element
+        const li = document.createElement('li');
+        li.innerText = 'Blog-5';
+        //where to add
+        const ul = document.getElementById('blog-list');
+
+        //append new element
+        ul.appendChild(li);
+        //add article
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        // const h3 = document.createElement('h3');
+        // h3.innerText = 'My Awesome Blog-5';
+        // const p = document.createElement('p');
+        // p.innerText = 'Deserunt atque vero consectetur velit maiores consequatur laudantium qui ea cupiditate quidem' ;
+        // article.appendChild(h3);
+        // article.appendChild(p);
+
+        article.innerHTML=`
+        <h3>My awesome Blog-3</h3>
+        <p>Deserunt atque vero consectetur velit maiores consequatur laudantium qui ea cupiditate quidem magnam ab modi, quo fuga sequi iure alias? Ea sunt maiores amet ducimus rem repellendus ratione quidem
+        esse.</p>`
+
+        //parent of article
+        const blogSection =document.getElementById('blogs');
+        blogSection.appendChild(article);
+        
+
+        //explore getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+
+        for (const blog of blogs) {
+            blog.style.border = '2px solid orange';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+            blog.style.borderRadius = '10px';
+        }
     </script>
 </body>
 
