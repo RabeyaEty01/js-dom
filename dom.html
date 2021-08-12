@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my blog website</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h3>My awesome Blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, excepturi. Ratione consequatur
+                    adipisci aperiam odit recusandae molestias esse, tempore magni quia? Molestias et laboriosam
+                    consectetur dignissimos adipisci, tempora error odit.</p>
+            </article>
+            <article>
+                <h3>My awesome Blog-2</h3>
+                <p>Rerum velit cumque assumenda? Sit, aliquam. Ipsam aut blanditiis rerum quae, quos doloribus
+                    doloremque necessitatibus. Voluptatem fugiat delectus eius quia vero, explicabo consectetur vitae
+                    sint nesciunt. Culpa obcaecati repellat est.</p>
+            </article>
+            <article>
+                <h3>My awesome Blog-3</h3>
+                <p>Deserunt atque vero consectetur velit maiores consequatur laudantium qui ea cupiditate quidem magnam
+                    ab modi, quo fuga sequi iure alias? Ea sunt maiores amet ducimus rem repellendus ratione quidem
+                    esse.</p>
+            </article>
+        </section>
+       
+    </main>
+    <script>
+        const student =[
+            {name: 'kismot ali', age: 16},
+            {name: 'rahim',age:20}
+        ];
+
+        
+        //console.log(document.body);
+        //const blogTitles =['h3','h3']
+        const blogTitles= document.getElementsByTagName('h3');
+        for(const h3 of blogTitles){
+            console.log(h3.innerText);
+        }
+        const blogDetails= document.getElementsByTagName('p');
+        for(const p of blogDetails){
+            console.log(p.innerText);
+        }
+    </script>
+</body>
+
+</html>
