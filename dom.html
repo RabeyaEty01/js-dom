@@ -131,6 +131,14 @@
             blog.style.padding = '5px';
             blog.style.borderRadius = '10px';
         }
+
+//child  show ,delete 
+        const blogsList =document.getElementById('blog-list');
+        //console.log(blogsList.children);
+        const third = blogsList.children[2];
+        console.log(third);
+        blogsList.removeChild(third);
+
     </script>
 </body>
 
